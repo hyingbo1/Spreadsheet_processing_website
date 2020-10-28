@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>二屏</title>
+
+
+    <style type="text/css">
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: Arial
+        }
+
+        .layout {
+            float: left;
+            height: 100%;
+            width: 50%;
+            background: #888;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+        }
+
+        #divScro {
+            overflow: auto;
+        }
+    </style>
+
+    <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+    <script type="text/javascript">  
+< !--
+            $(function () {
+
+                $("#Applet1").click(function () {
+                    alert("外部div宽：" + $("#left_top").width() + "   高：" + $("#left_top").height() + "\n" + "内部div宽：" + $("#Applet1").width() + "    高：" + $("#Applet1").height());
+                });
+                $("#Applet2").click(function () {
+                    alert("外部div宽：" + $("#right_top").width() + "  高：" + $("#right_top").height() + "\n" + "内部div宽：" + $("#Applet2").width() + "   高：" + $("#Applet2").height());
+                });
+                $("#Applet3").click(function () {
+                    alert("外部div宽：" + $("#left_bottom").width() + "    高：" + $("#left_bottom").height() + "\n" + "内部div宽：" + $("#Applet3").width() + "     高：" + $("#Applet3").height());
+                });
+                $("#Applet4").click(function () {
+                    alert("外部div宽：" + $("#right_bottom").width() + "   高：" + $("#right_bottom").height() + "\n" + "内部div宽：" + $("#Applet4").width() + "    高：" + $("#Applet4").height());
+                });
+
+
+
+            });
+//-->  
+    </script>
+
+</head>
+
+
+<body>
+    <div style="border: 2px red solid; margin: 0px; padding: 0px; height: 99%; width: 99%;">
+        <div id="divScro" class="layout">
+            <div id="Applet1" style="border: 1px yellow solid; margin: 2px; padding: 2px; height: 97%;">
+
+
+                <img src='{{ img.img.url }}' />
+
+            </div>
+        </div>
+        <div id="divScro" class="layout">
+            <div id="Applet2" style="border: 1px yellow solid; margin: 2px; padding: 2px; height: 97%; ">
+                <style type='text/css'>
+                    input {
+                        width: 98%;
+                        overflow-x: visible;
+                        overflow-y: visible;
+                    }
+                </style>
+
+                <body>
+                    <form method="GET" action="/after_img_form">
+                        <table border=1>
+                            {% csrf_token %} {{ html_txt|safe }}
+
+                        </table>
+                        <input type="submit" value="提交">
+                    </form>
+                </body>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

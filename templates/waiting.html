@@ -1,0 +1,23 @@
+<!doctype html>
+　　<html>
+　　　　<head>
+　　　　　　<meta charset="utf-8">
+　　　　　　<title>识表</title>
+　　　　　　<script type="text/javascript">
+　　　　　　　　var time = 120; //时间,秒
+　　　　　　　　function Redirect() {
+ 　　　　　　　　window.location = "http://119.27.174.158/img_form";
+　　　　　　　　}
+　　　　　　　　var i = 0;
+　　　　　　　　function dis() {
+ 　　　　　　　　document.all.s.innerHTML = "还剩" + (time - i) + "秒";
+ 　　　　　　　　i++;
+　　　　　　　　}
+　　　　　　　　timer = setInterval('dis()', 1000); //显示时间
+　　　　　　　　timer = setTimeout('Redirect()', time * 1000); //跳转
+　　　　　　</script>
+　　</head>
+　　<body>
+　　　　<span id="s"></span>
+　　</body>
+</html>

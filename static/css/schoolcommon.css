@@ -1,0 +1,130 @@
+credit
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button,
+textarea, p, blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+fieldset, img {
+    border: 0;
+}
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ol, ul {
+    list-style: none;
+}
+
+:link,:visited,:hover,:active,:focus {
+    text-decoration: none;
+    outline:0;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+table{
+    border-spacing: 0;
+
+}
+a{
+    text-decoration: none;
+    color: #C33;
+	font-size:1em;
+}
+
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border:none;
+    padding:0;
+}
+body{
+    line-height: 1.6;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+    color:#EEE;
+    background:url(../image/login_bg_0.jpg) #f8f6e9;
+    font-size: 14px;
+    width:100%;
+    height: 100%;
+    
+}
+
+#scLoadingLayer{
+    position:fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:url(../image/login_bg_0.jpg) #f8f6e9;
+    -webkit-transition: -webkit-transform 1000s ease-in-out, opacity 218ms ease-in-out;
+    -o-transition: -webkit-transform 100ms ease-in-out, opacity 218ms ease-in-out;
+    transition: -webkit-transform 2ms ease-in-out, opacity 218ms ease-in-out;
+    -moz-transition: all .9s ease-out
+}
+
+#scLoadingLayer.fading {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+#scLoadingLayer .logoloading{
+    position:absolute;
+    top: 50%;
+    left: 48%;
+    margin-left: -132px;
+    margin-top: -132px;
+}
+#scLoadingLayer .logo{
+	position: absolute;
+	top: 50%;
+	left: 48.5%;
+	margin-left: -100px;
+	margin-top: -100px;
+}
+#scLoadingLayer .words{
+    display: inline-block;
+    text-align: center;
+    width:300px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:150px;
+    margin-left:-150px;
+}
+#scLoadingLayer .words.normal{
+    color:#FFFFFF;
+}
+#scLoadingLayer .words.error{
+    color: #FF0000;
+}
+#scLoadingLayer .logoloading{
+    -webkit-animation: spin 1s infinite linear;-o-animation: spin 1s infinite linear;animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    0%  {transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    0%  {-moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}
+
+@-o-keyframes spin{
+    0%  {-o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(360deg);}
+}

@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.seat
+{
+	width: 20%;
+	height: 2.6em;
+	margin-top: 2%;
+	margin-left: 5%;
+	background-color:#00552B;
+	border-radius: 3px;
+	 
+
+}
+.checkout-button{
+	background-color:#C63;
+	
+	margin-left: 20%;
+	margin-top: 10%;
+	width: 60%;
+	border-radius: 30px;
+	-moz-border-radius: 7px;
+	font-size: 1.2em;
+	color:#EEE;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-align: center;
+	font-family: "\5FAE\8F6F\96C5\9ED1","helvetica neue",arial,sans-serif;
+    font-weight: 500;
+   
+	
+	
+	
+	
+}
+.title{
+	font-size: 2.3em;
+	
+	font-weight:100;
+	color:#EEE;
+	
+}
+.main{
+	margin-top: 6%;
+	margin-left: 3%;
+	background: url(../image/login_bg_0.jpg) no-repeat;
+	width: 90%;
+	height: auto;
+	border-radius: 20px;
+	float: none;
+}
+.styled-select select {    
+background: transparent;    
+width: 10%;    
+padding: 5px;    
+font-size: 16px; 
+text-align:center;  
+ border: 1px solid #ccc;    
+ height: 2em;   
+  -webkit-appearance: none;
+  background-color:#FFF; /*for chrome*/ }

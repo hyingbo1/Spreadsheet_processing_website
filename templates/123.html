@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>识表</title>
+    <style>
+        body {
+            background: #eee;
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav {
+            width: 1000px;
+            margin: 20px auto;
+            height: 50px;
+            background: cornflowerblue;
+            border-radius: 15px;
+            padding-top: 10px;
+            box-shadow: 0 2px 2px 1px #000;
+        }
+
+        #nav li {
+            float: left;
+            list-style: none;
+            text-align: center;
+            height: 40px;
+            width: 100px;
+            padding: 8px 10px;
+
+        }
+
+        #nav a {
+            font-weight: bold;
+            color: #f4f4f4;
+            text-decoration: none;
+            display: block;
+            border-radius: 10px;
+            /*some css3*/
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            text-shadow: 0 1px 1px #000;
+        }
+
+        #nav li:hover>a {
+            background: #f4f4f4 repeat-x 0 -20px;
+            color: #000;
+            border-top: 1px solid #f8f8f8;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .7);
+            /*some css3*/
+            -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .7);
+            -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .7);
+            text-shadow: 0 2px 2px rgba(255, 255, 255, 0.7);
+        }
+
+        #nav ul li:hover a,
+        #nav li:hover li a {
+            background: none;
+            border: none;
+            color: #000;
+        }
+
+        #nav ul li a:hover {
+            background: #335599 repeat-x 0 -100px;
+            color: #fff;
+            border-radius: 10px;
+            /*some css3*/
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        #nav ul li:first-child>a {
+            -moz-border-radius-topleft: 10px;
+            /*some css3*/
+            -moz-border-radius-topright: 10px;
+            -webkit-border-top-left-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+        }
+
+        #nav ul li:last-child>a {
+            -moz-border-radius-bottomleft: 10px;
+            /*some css3*/
+            -moz-border-radius-bottomright: 10px;
+            -webkit-border-bottom-left-radius: 10px;
+            -webkit-border-bottom-right-radius: 10px;
+        }
+
+        #nav li:hover>ul {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #nav ul {
+            opacity: 0;
+            visibility: hidden;
+            padding: 0;
+            width: 120px;
+            position: absolute;
+            background: #aabbcc repeat-x 0 0;
+            border: 1px solid #7788aa;
+
+            border-radius: 10px;
+            /*some css3*/
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+            -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+            -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+
+            -moz-transition: opacity .25s linear, visibility .1s linear .1s;
+            -webkit-transition: opacity .25s linear, visibility .1s linear .1s;
+            -o-transition: opacity .25s linear, visibility .1s linear .1s;
+            transition: opacity .25s linear, visibility .1s linear .1s;
+        }
+
+        #nav ul li {
+            float: none;
+            margin: 0;
+        }
+
+        #nav ul a {
+            font-weight: normal;
+            text-shadow: 0 2px 2px rgba(255, 255, 255, 0.7);
+        }
+
+        #nav ul ul {
+            left: 60px;
+            top: 0px;
+        }
+
+        #bottom {
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+            text-align: center;
+        }
+
+        #container_buttons {
+            width: 400px;
+            height: 80px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.09) inset;
+        }
+
+        #container_buttons p {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .a_demo_one {
+            text-align: center;
+            background-color: #3bb3e0;
+            padding: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            position: relative;
+            color: #fff;
+            border: solid 1px #186f8f;
+            background-image: linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+            background-image: -o-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+            background-image: -moz-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+            background-image: -webkit-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+            background-image: -ms-linear-gradient(bottom, rgb(44, 160, 202) 0%, rgb(62, 184, 229) 100%);
+            background-image: -webkit-gradient( linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(44, 160, 202)),
+            color-stop(1, rgb(62, 184, 229)));
+            -webkit-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+            -moz-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+            box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        .a_demo_one::before {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            background-color: #ccd0d5;
+            content: "";
+            display: block;
+            padding: 8px;
+            left: -8px;
+            top: -8px;
+            z-index: -1;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+            -moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+            -o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+            box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+        }
+
+        .a_demo_one:active {
+            text-align: center;
+            padding-bottom: 9px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 11px;
+            top: 1px;
+            background-image: linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+            background-image: -o-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+            background-image: -moz-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+            background-image: -webkit-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+            background-image: -ms-linear-gradient(bottom, rgb(62, 184, 229) 0%, rgb(44, 160, 202) 100%);
+            background-image: -webkit-gradient( linear,
+            left bottom,
+            left top,
+            color-stop(0, rgb(62, 184, 229)),
+            color-stop(1, rgb(44, 160, 202)));
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul id="nav">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">识表</a>
+                <ul>
+                    <li>
+                        <a href="#">电子表格</a>
+                    </li>
+                    <li>
+                        <a href="#">拍照表格</a>
+                    </li>
+                    <li>
+                        <a href="#">扫描表格</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="http://119.27.174.158/login">登录</a>
+            </li>
+            <li>
+                <a href="#">注册</a>
+            </li>
+
+        </ul>
+        <form action="/upload/" method="POST" enctype="multipart/form-data">
+            <div style="width:body.clientWidth;height:body.clientHeight;text-align:center;padding-top:20px;">
+                <input type="file" name="img" style="width:800px;height:400px;background-image:url(http://119.27.174.158/static/2.png);">
+
+            </div>
+            <div style="width:body.clientWidth;height:body.clientHeight;text-align:center;padding-top:20px;">
+            <div style="align-content: center;">
+                <input type="submit" name="" autocomplete="off" value="" style="width:215px;height:64px;background-image:url(http://119.27.174.158/static/button.png);">
+            </div>
+            </div>
+            <!--div id="container_buttons">
+            <div style="width:400px;height:80px;">
+                    <a href="#" class="a_demo_one">
+                        提交
+                    </a>
+            </div-->
+
+        </form>
+
+    </nav>
+</body>
+
+</html>
