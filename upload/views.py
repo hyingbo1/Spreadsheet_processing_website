@@ -389,13 +389,11 @@ def form(imgname,wordname):
     print (timestart),(" s")
 
     #传入账户api秘钥信息
-    #APP_ID = '10996912'
-    #API_KEY = 'mLyRcBTu5Uz3Qxk2Gajlaxyr'
-    #SECRET_KEY = 'GKF9qwwS2u3uVCcYMvjrbhhf6ZqK7e9u'
+
     
-    APP_ID = '11044010'
-    API_KEY = 'ov1zBYPHHaGUnmQTkI184n7Z'
-    SECRET_KEY = 'EGb767Z9ovo7aSj9X4rwzDLqiN1TPooH'
+    APP_ID = ''
+    API_KEY = ''
+    SECRET_KEY = ''
     
     img1 = IMG.objects.get(name = imgname)
     print(img1.img.url)
